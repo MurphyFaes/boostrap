@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site web Boostrap</title>
+    <!-- Inclure Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style boostrap.css">
+</head>
+<body>
+
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand yes" href="essai.html">Essai</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="monsite.html" class="nav-link yes">Mon site web</a>
+            </li>
+            <li class="nav-item">
+                <a href="ip.html" class="nav-link yes">Informations personnelles</a>
+            </li>
+            <li class="nav-item">
+                <a href="tableau.html" class="nav-link yes">Tableau </a>
+            </li>
+            <li class="nav-item">
+                <a href="formulaire.html" class="nav-link yes">Formulaire</a>
+            </li>
+            <li class="nav-item">
+                <a href="CV.png" class="nav-link yes">Mon Curriculum Vitae</a>
+            </li>
+            
+        </ul>
+    </div>
+   
+</nav>
+ <!-- En-tête -->
+ <header class="row bg-light mt-5">
+    <div class="col">
+        <img src="uac.png" alt="Logo 1" style="float: inline-start;" width="100" height="100">
+    </div>
+    <div class="col py-4" ><h3 style="white-space: nowrap;">Eneam Nationale D'Economie Appliquée et de Management </h3></div>
+    <div class="col">
+        <img src="eneam.png" alt="Logo 2" style="float: inline-end;" width="100" height="100">
+    </div>
+</header>
+
+<!-- Contenu des pages -->
+
+<div class="container mt-5" id="Contenu">
+
+    <iframe id="content-frame" frameborder="0" width="100%" height="1500" scrolling="no">
+
+    </iframe>
+
+</div>
+
+
+<!-- Inclure Bootstrap JS (à la fin du body) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Get the iframe element
+
+const iframe = document.getElementById('content-frame');
+
+
+// Add event listeners to the navigation links
+
+document.querySelectorAll('.yes').forEach(link => {
+
+    link.addEventListener('click', event => {
+
+        event.preventDefault();
+
+        const href = link.getAttribute('href');
+
+        iframe.src = href;
+
+    });
+
+});
+</script>
+
+
+<script>
+
+    // Get the iframe element
+    
+    const ifram = document.getElementById('contenu');
+    
+    
+    // Function to adjust the iframe height to match the content height
+    
+    function adjustIframeHeight() {
+    
+      // Set the iframe height to the content height
+    
+      ifram.style.height = ifram.contentWindow.document.documentElement.scrollHeight + 'px';
+    
+    }
+    
+    
+    // Add an event listener to the iframe to adjust the height when the content changes
+    
+    ifram.addEventListener('load', adjustIframeHeight);
+    
+    
+    // Add an event listener to the window to adjust the height when the window is resized
+    
+    window.addEventListener('resize', adjustIframeHeight);
+    
+    </script>
+
+    
+</body>
+</html>

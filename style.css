@@ -1,0 +1,17 @@
+#T{
+  background-color: red
+}
+#exercices{
+  background-color: rebeccapurple;
+}
+frame#fc{
+  background-image: src="";
+  height:"200" width:"200";
+  align:"center";
+}
+    
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 90%;
+  }
+}

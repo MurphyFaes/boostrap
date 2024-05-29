@@ -1,0 +1,25 @@
+
+body{
+    background-color: #C8AD7F;
+    background-image: url(#);
+    background-repeat: repeat; /* Repeat the image (optional) */
+    background-size: cover; /* Resize the image to cover the entire area (optional) */
+    background-position: center; /* Position the image in the center (optional) */
+      
+    
+}
+a{
+    color: black;
+    border: 4px outset rgba(0, 0, 0, 0.87);
+    display: block;
+    padding: 10px;
+}
+.small-image{
+    width: 100px;
+    height: auto;
+}
+@media screen and (max-width: 1500px) {
+    .container {
+      width: 90%;
+    }
+  }
